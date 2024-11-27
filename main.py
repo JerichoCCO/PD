@@ -1,7 +1,7 @@
 import streamlit as st
 
 # Set page configuration without an icon
-st.set_page_config(page_title="Vehicle Classification", layout="wide")
+st.set_page_config(page_title="Plantar Classification System", layout="wide")
 
 # Page title
 st.write(
