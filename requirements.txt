@@ -1,7 +1,7 @@
-streamlit
+streamlit>=1.25.0
 streamlit-option-menu
 streamlit-lottie
-numpy
-Pillow
+numpy>=1.21.0
+Pillow>=9.0.0
 opencv-python-headless
-tensorflow
+tensorflow>=2.10.0
