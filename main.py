@@ -50,7 +50,7 @@ def load_labels(filename):
         return []
 
 # Add a file uploader and prediction logic
-st.title("Model Prediction")
+st.title("Foot Arch Classification")
 test_image = st.file_uploader("Choose an Image:")
 if test_image is not None:
     st.image(test_image, width=300, caption="Uploaded Image")
