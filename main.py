@@ -32,7 +32,7 @@ def predict(image, model, labels):
     return labels[predicted_class[0]]
     
 # Load the model
-model = load_model('vehicle.h5')  
+#model = load_model('vehicle.h5')  
 
 # Function to load labels from a text file
 def load_labels(filename):
