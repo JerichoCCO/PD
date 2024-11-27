@@ -30,3 +30,13 @@ def predict(image, model, labels):
     result = model.predict(img)
     predicted_class = np.argmax(result, axis=1)
     return labels[predicted_class[0]]
+    
+# Load the model
+model = load_model('vehicle.h5')  
+
+# Function to load labels from a text file
+def load_labels(filename):
+    with open(filename, 'r') as file:
+        labels = file.readlines()
+    labels = [label.strip() for label in labels]
+    return labels
