@@ -12,11 +12,11 @@ st.write(
 
 def load_image(image_file):
     img = Image.open(image_file)
-    img = img.resize((32, 32))
+    img = img.resize((299, 299))  # Resize to (299, 299)
     img = np.array(img)
     if img.shape[-1] == 4:
         img = img[..., :3]
-    img = img.reshape(1, 32, 32, 3)
+    img = img.reshape(1, 299, 299, 3)  # Match model input shape
     img = img.astype('float32')
     img /= 255.0
     return img
