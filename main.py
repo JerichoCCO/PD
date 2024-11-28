@@ -34,7 +34,7 @@ def predict(image, model, labels):
 
 # Load the model
 # try:
-#     model = load_model('vehicle.h5')  # Commenting out for now
+#     model = load_model('xception_model_frozen_stabilized_2.h5')  # Commenting out for now
 # except Exception as e:
 #     st.error(f"Error loading the model: {e}")
 
