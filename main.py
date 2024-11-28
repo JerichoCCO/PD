@@ -43,12 +43,15 @@ def load_labels(filename):
         return []
 
 st.title("Foot Arch Classification")
-test_image = st.file_uploader("Choose an Image:")
+test_image = st.file_uploader("Choose an Image:", type=["jpg", "jpeg", "png"])
 if test_image is not None:
-    st.image(test_image, width=300, caption="Uploaded Image")
-    if st.button("Predict"):
-        st.write("Predicting...")
+    try:
+        st.image(test_image, width=300, caption="Uploaded Image")
         labels = load_labels("labels.txt")
-        if labels:
-            predicted_category = predict(test_image, model, labels)
-            st.success(f"Predicted Foot Arch Category: {predicted_category}")
+        if st.button("Predict"):
+            st.write("Predicting...")
+            if labels:
+                predicted_category = predict(test_image, model, labels)
+                st.success(f"Predicted Foot Arch Category: {predicted_category}")
+    except Exception as e:
+        st.error(f"Error processing the uploaded image: {e}")
